@@ -1,0 +1,6 @@
+# The SDK source is pinned and installed locally by scripts/setup_unitree.sh.
+# SDK: 65691c8a8bc53b98d3976dba4dbf9d5d20b2e7f5
+# Direct dependencies; the setup script also records a complete pip freeze.
+cyclonedds==0.10.2
+numpy==1.26.4
+opencv-python==4.10.0.84

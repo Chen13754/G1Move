@@ -1,0 +1,151 @@
+{
+  "name": "G1Move portable handoff",
+  "date": "2026-09-17",
+  "entry_document": "HANDOFF.md",
+  "conversation": "docs/conversation/CHAT_HISTORY.md",
+  "test_status": "35 mock tests passed on Windows/Python 3.12.14 on 2026-09-17; no robot or Ubuntu SDK validation",
+  "excluded": [
+    ".cache",
+    ".deps",
+    ".git",
+    ".venv",
+    "__pycache__",
+    "build",
+    "dist",
+    "*.egg-info",
+    "*.pyc",
+    "*.pyo"
+  ],
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 70,
+      "sha256": "06fc5a784894a0669be2bf7886ce9e3649debe332752caa664304bc6169082ff"
+    },
+    {
+      "path": "AGENT_INTERFACE.md",
+      "bytes": 9472,
+      "sha256": "954d4a95a3a972c34e0fc5dc1f3bc82fc0dfb8e01c08db0b31e2ef863e443f65"
+    },
+    {
+      "path": "AGENTS.md",
+      "bytes": 850,
+      "sha256": "ca8bab7f99397d2d7cdf937303b8232f313020d245e1ca1326f2ef1929806cdd"
+    },
+    {
+      "path": "config.json",
+      "bytes": 240,
+      "sha256": "73e2d73ce29ab782938c7e499cf28de3b49bc18c1afe4ef40e48b7eef34d87cd"
+    },
+    {
+      "path": "docs/conversation/attachments/group-concept-image-1.jpg",
+      "bytes": 239381,
+      "sha256": "f27c741ae9d3f39f32648dd370cbccc42f4eafece0328aa2d5fc7ed2e90adb12"
+    },
+    {
+      "path": "docs/conversation/CHAT_HISTORY.md",
+      "bytes": 54755,
+      "sha256": "6a88aece1ad46a377d562e5aaea88d24983fed8446a7f4bd7ae54ab866bcbf11"
+    },
+    {
+      "path": "docs/conversation/conversation.jsonl",
+      "bytes": 101060,
+      "sha256": "4171fad99b36bdc6494290f4b99bab1137c7262d6b6e0bb7ed1b2ef3b27b6ede"
+    },
+    {
+      "path": "docs/conversation/export_manifest.json",
+      "bytes": 1476,
+      "sha256": "8b15bd13f82643b501e5b35234a8589ea0baabe1926e72c9aa314f7c4d837c16"
+    },
+    {
+      "path": "examples/basic.py",
+      "bytes": 879,
+      "sha256": "93077298421c9e189814801ff45aede8db9b9fe1b382cc52051a187f7a3e639b"
+    },
+    {
+      "path": "examples/sequence.json",
+      "bytes": 81,
+      "sha256": "7445f461f8b2e1909c424029e76271afe4206a9cc307dc1d603778a904052f4b"
+    },
+    {
+      "path": "g1_move/__init__.py",
+      "bytes": 285,
+      "sha256": "62bc4a1cbbd2d0f596105bc88f940a6e408912316ad607a5eac7bc836797ba77"
+    },
+    {
+      "path": "g1_move/__main__.py",
+      "bytes": 84,
+      "sha256": "a0d0b972b34452fbfae20f3376f96bf76d0f466e98288f1ca22e2cee5b41cd1a"
+    },
+    {
+      "path": "g1_move/backends.py",
+      "bytes": 2645,
+      "sha256": "a3e7a25efaeedb4243fef19b84ae72c56db4faf4212c6ec2087b5bf17122fe77"
+    },
+    {
+      "path": "g1_move/cli.py",
+      "bytes": 9511,
+      "sha256": "d117a092d24ef1e345cedb9a84d10cde6e8da45780ff69a87d5625a38823c136"
+    },
+    {
+      "path": "g1_move/config.py",
+      "bytes": 2428,
+      "sha256": "5c3b47b58835fca7a60fe5702013b6a3da153b0886096ef4b52e42ecb6efc21b"
+    },
+    {
+      "path": "g1_move/motion.py",
+      "bytes": 7400,
+      "sha256": "849b7d678d84b9c74ecd147b17461814a81096c1a726512673f966aef68add4e"
+    },
+    {
+      "path": "HANDOFF.md",
+      "bytes": 12540,
+      "sha256": "4410a174a8bab46cad3c77a8e06c47619badea87d865e3b1ca472e3afd47d552"
+    },
+    {
+      "path": "pyproject.toml",
+      "bytes": 353,
+      "sha256": "1e8575a5a02124011a42b7df0dfd3a6f94c948de7c868781514fe243822b5d08"
+    },
+    {
+      "path": "README.md",
+      "bytes": 8294,
+      "sha256": "f023fba150eee600f06f50c9b74522fc7083c8da2318b764b2e69999e7fcab83"
+    },
+    {
+      "path": "requirements-unitree.txt",
+      "bytes": 260,
+      "sha256": "5fe05c0a29a44f5d9744a4879e4faa047cd0e5d0033fb8081b04c8b14b510e59"
+    },
+    {
+      "path": "scripts/run.sh",
+      "bytes": 571,
+      "sha256": "a34c1c682b661478b0b3811ce8daaf67ce478b83da4a72af4528e0a9cd7f6901"
+    },
+    {
+      "path": "scripts/setup_unitree.sh",
+      "bytes": 3887,
+      "sha256": "7359a2c15fd74fdbd8ecec65a3b2a45a06421435a9fc955f70bd927e0e261824"
+    },
+    {
+      "path": "tests/test_backends.py",
+      "bytes": 4912,
+      "sha256": "d217dca9d663c2de6547c6dde57973ee2d96e6e6a202d169824e40f4759f8a37"
+    },
+    {
+      "path": "tests/test_cli.py",
+      "bytes": 5347,
+      "sha256": "5d438911cd150b2c5cbf2c94cfba8a0c4b35530b2e2bb4067d2621ed548f2a6b"
+    },
+    {
+      "path": "tests/test_config.py",
+      "bytes": 3505,
+      "sha256": "de0dae5b68ffa7b7ba567b8c0e23dc4e02828f39061643b624d32920b4081ab3"
+    },
+    {
+      "path": "tests/test_motion.py",
+      "bytes": 11596,
+      "sha256": "d2fdd5f39eff4ccdada3de89b454850d91cefa57617ba18fde76584b4278ede6"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+--- a/src/core/ddsi/src/ddsi_config.c
++++ b/src/core/ddsi/src/ddsi_config.c
+@@ -850,13 +850,13 @@
+     }
+     if (pc_best != 0)
+     {
+-      resp += snprintf (resp, 256, "%s%s", prefix, names[i_best]);
++      resp += snprintf (resp, sizeof (res) - (size_t) (resp - res), "%s%s", prefix, names[i_best]);
+       mask &= ~codes[i_best];
+       prefix = ",";
+     }
+     else
+     {
+-      resp += snprintf (resp, 256, "%s0x%x", prefix, (unsigned) mask);
++      resp += snprintf (resp, sizeof (res) - (size_t) (resp - res), "%s0x%x", prefix, (unsigned) mask);
+       mask = 0;
+     }
+   }

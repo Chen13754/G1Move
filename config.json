@@ -1,8 +1,16 @@
 {
   "linear_speed_mps": 0.2,
   "angular_speed_deg_s": 15.0,
-  "move_time_factors": {"forward": 1.0, "backward": 1.0, "left": 1.0, "right": 1.0},
-  "turn_time_factors": {"left": 1.0, "right": 1.0},
+  "move_time_factors": {
+    "forward": 1.2048192771084338,
+    "backward": 1.3693181818181819,
+    "left": 1.8382352941176467,
+    "right": 1.2254666666666667
+  },
+  "turn_time_factors": {
+    "left": 1.62,
+    "right": 1.62
+  },
   "pause_s": 0.5,
   "rpc_timeout_s": 2.0
 }

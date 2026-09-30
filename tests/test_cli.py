@@ -22,7 +22,7 @@ class CliTests(unittest.TestCase):
         self.assertEqual(result.returncode, 0, result.stderr)
         self.assertEqual(json.loads(result.stdout), {
             "kind": "move", "direction": "forward", "value": 1.0,
-            "unit": "m", "duration_s": 5.0, "status": "completed",
+            "unit": "m", "duration_s": 6.024096385542169, "status": "completed",
         })
 
     def test_dds_domain_option_is_forwarded(self):

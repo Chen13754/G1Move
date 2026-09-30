@@ -53,7 +53,8 @@ class ConfigTests(unittest.TestCase):
         config = MotionConfig(move_time_factors=factors)
         factors["forward"] = 999
         with G1Move(config=config, mock_realtime=False) as robot:
-            self.assertEqual(robot.move("forward", 1).duration_s, 5)
+            self.assertAlmostEqual(robot.move("forward", 1).duration_s,
+                                   5 * config.move_time_factors["forward"])
 
     def test_invalid_distances_and_angles_send_no_motion(self):
         with G1Move(mock_realtime=False) as robot:

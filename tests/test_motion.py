@@ -64,7 +64,9 @@ class MotionTests(unittest.TestCase):
                          [False, True, False, True, False, True, False])
 
     def test_rpc_latency_is_subtracted_from_action_wait(self):
-        robot = self.make_robot(MotionConfig(pause_s=0.3))
+        robot = self.make_robot(MotionConfig(pause_s=0.3, move_time_factors={
+            "forward": 1.0, "backward": 1.0, "left": 1.0, "right": 1.0,
+        }))
         with patch("g1_move.motion.time.monotonic", side_effect=[100.0, 100.2]), \
              patch.object(robot, "_wait", return_value=False) as wait:
             robot.move("forward", 1)

@@ -1,3 +1,5 @@
+> 2026-09-30 最新状态：2026-09-25 实机最终时间系数已同步写入 config.json 和 MotionConfig 内置默认值。详见 [CALIBRATION.md](docs/CALIBRATION.md)。前进 3 m 实测 2.76 m，未进一步修正。本次仅 mock 软件验证；下文早期未标定状态为历史记录。源码已发布到 https://github.com/Chen13754/G1Move。
+
 # G1Move 项目交接：给 SSH／服务器上的接手 Agent
 
 **2026-09-22 当前目录：** 移动模块位于 `/home/yuyang/G1Move`；全部物理仿真代码、模型、依赖、实验输出和仿真环境已分离到相邻的 `/home/yuyang/G1Sim`。仿真命令从 G1Sim 执行，使用其 `.venv`；G1Move 的 `.venv` 仅保留移动 SDK 所需依赖。G1Sim 可编辑引用本目录的 `g1_move`，不会复制一份生产实现。下文旧日期的 peilab 路径和测试数量属于历史记录，当前连接账号为 `yuyang`。本次变更不修改移动算法、默认速度或标定参数。迁移与验证记录见 [G1Sim](../G1Sim/README.md)。

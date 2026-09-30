@@ -25,10 +25,11 @@ class MotionConfig:
     linear_speed_mps: float = 0.2
     angular_speed_deg_s: float = 15.0
     move_time_factors: Mapping[str, float] = field(default_factory=lambda: {
-        "forward": 1.0, "backward": 1.0, "left": 1.0, "right": 1.0,
+        "forward": 1.2048192771084338, "backward": 1.3693181818181819,
+        "left": 1.8382352941176467, "right": 1.2254666666666667,
     })
     turn_time_factors: Mapping[str, float] = field(default_factory=lambda: {
-        "left": 1.0, "right": 1.0,
+        "left": 1.62, "right": 1.62,
     })
     pause_s: float = 0.5
     rpc_timeout_s: float = 2.0

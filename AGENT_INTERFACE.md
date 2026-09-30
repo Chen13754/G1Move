@@ -7,7 +7,7 @@
 ## 能力与调用前提
 
 - 支持前进、后退、左右侧移、左右转向，以及这些动作的顺序组合。
-- 使用时间换算，无定位反馈；`completed` 不代表已测量确认到位。初始参数未标定，实际精度未知。
+- 使用时间换算，无定位反馈；`completed` 不代表已测量确认到位。当前默认系数来自有限实机实验，适用范围及记录见 [CALIBRATION.md](docs/CALIBRATION.md)。
 - 真机必须已经按官方流程处于兼容的原生运动控制模式，调用主机已接通机器人网络。
 - 调用方负责安排移动与上肢操作的时序，避免多个程序同时发布移动命令。
 - 本模块不控制手臂、腰部和关节力矩，不实现避障、路径规划或平衡算法。无移动任务时沿用机载原生站立控制。
@@ -118,7 +118,7 @@ with G1Move(
   "direction": "forward",
   "value": 1.0,
   "unit": "m",
-  "duration_s": 5.0,
+  "duration_s": 6.024096385542169,
   "status": "completed"
 }
 ```
@@ -230,7 +230,7 @@ bash scripts/run.sh --config simulation/motion_config.json move forward 0.4
 
 ## 默认参数与能力边界
 
-默认平移速度为 `0.2 m/s`、转向速度为 `15 °/s`；各方向时间修正系数为 `1.0`，每个动作结束后停顿为 `0.5 s`，SDK 超时为 `2.0 s`。命令行省略 `--config` 时使用内置默认值，不自动读取 `config.json`；使用标定文件时显式传入 `--config config.json`。Python 使用 `MotionConfig.from_file("config.json")` 后将其传入构造函数。
+默认平移速度为 `0.2 m/s`、转向速度为 `15 °/s`；时间修正系数为前进 `1.204819`、后退 `1.369318`、左移 `1.838235`、右移 `1.225467`、左右转 `1.62`，每个动作结束后停顿为 `0.5 s`，SDK 超时为 `2.0 s`。命令行省略 `--config` 时使用内置默认值，不自动读取 `config.json`；使用标定文件时显式传入 `--config config.json`。Python 使用 `MotionConfig.from_file("config.json")` 后将其传入构造函数。
 
 ```text
 move 的 duration_s = distance_m / linear_speed_mps × move_time_factors[direction]
